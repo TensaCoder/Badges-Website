@@ -1,44 +1,43 @@
 .upload-files-container {
-    width: 50%;
-    height: auto;
-    border: 2px dashed #aaa;
-    text-align: center;
-    padding-top: 50px;
-    margin: 10rem auto;
-  }
-  
-  .upload-files-drop-area {
-    width: 100%;
-    height: 200px;
-    /* border: 2px dashed #aaa; */
-    text-align: center;
-    padding-top: 50px;
-  }
-  
-  .upload-files-drop-area p {
-    margin: 0;
-  }
-  
-  .upload-files-input-area {
-    margin-top: 20px;
-    text-align: center;
-    justify-content: center;
-  }
-  
-  /* .upload-files-input {
+  width: 50%;
+  height: auto;
+  border: 2px dashed #aaa;
+  text-align: center;
+  padding-top: 50px;
+  margin: 10rem auto;
+}
+
+.upload-files-drop-area {
+  width: 100%;
+  height: 200px;
+  /* border: 2px dashed #aaa; */
+  text-align: center;
+  padding-top: 50px;
+}
+
+.upload-files-drop-area p {
+  margin: 0;
+}
+
+.upload-files-input-area {
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+/* .upload-files-input {
     display: none;
   } */
-  
-  .upload-files-button {
-    margin-top: 10px;
-  }
-  
-  .upload-files-list {
-    margin-top: 20px;
-    text-align: left;
-  }
-  
-  .upload-files-list-item {
-    margin-bottom: 5px;
-  }
-  
+
+.upload-files-button {
+  margin-top: 10px;
+}
+
+.upload-files-list {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.upload-files-list-item {
+  margin-bottom: 5px;
+}

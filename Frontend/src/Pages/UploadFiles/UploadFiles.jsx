@@ -27,7 +27,7 @@ const UploadFiles = () => {
         formData.append('files', file);
       });
       // Replace 'your-backend-endpoint' with your actual backend endpoint
-      const response = await axios.post('your-backend-endpoint', formData, {
+      const response = await axios.post('backend-endpoint', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
