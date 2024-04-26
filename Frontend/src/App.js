@@ -3,7 +3,7 @@ import {
   Routes,
   BrowserRouter,
 } from "react-router-dom";
-import UploadFiles from "./Pages/UploadFiles";
+import UploadFiles from "./Pages/UploadFiles/UploadFiles";
 import './App.css';
 
 function App() {

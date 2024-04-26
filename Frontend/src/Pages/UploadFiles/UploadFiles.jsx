@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 // import axios from 'axios';
+import './UploadFiles.css';
 
 const UploadFiles = () => {
   const [files, setFiles] = useState([]);
@@ -39,24 +40,26 @@ const UploadFiles = () => {
   };
 
   return (
-    <div style={{ width: '50%', height: '75vh', border: '2px dashed #aaa', textAlign: 'center', paddingTop: '50px', margin: "10rem" }}>
+    <div className="upload-files-container">
       <div
-        
+        className="upload-files-drop-area"
         onDrop={handleFileDrop}
         onDragOver={(e) => e.preventDefault()}
       >
         <p>Drag & drop CSV files here</p>
       </div>
-      <div style={{ marginTop: '20px', textAlign: 'center', justifyContent:"center" }}>
-        <input type="file" multiple accept='.csv' onChange={handleFileSelect} c />
+      <div className="upload-files-input-area">
+        <input className="upload-files-input" type="file" multiple accept='.csv' onChange={handleFileSelect} />
         <br />
       </div>
-        <button disabled={files.length === 0} onClick={handleFileUpload}>Upload Files</button>
-        {files.map((file, index) => (
-          <div key={index}>
-            <p>File {index + 1}: {file.name}</p>
-          </div>
-        ))}
+        <button className="upload-files-button" disabled={files.length === 0} onClick={handleFileUpload}>Upload Files</button>
+        <div className="upload-files-list">
+          {files.map((file, index) => (
+            <div key={index} className="upload-files-list-item">
+              <p>File {index + 1}: {file.name}</p>
+            </div>
+          ))}
+        </div>
     </div>
   );
 };
