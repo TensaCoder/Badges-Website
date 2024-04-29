@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 
-app.post('/csv-upload', upload.single('file'), csvUploadController.uploadCSV);
+app.post('/csv-upload', upload.single('files'), csvUploadController.uploadCSV);
 
 app.listen(port, () => {
     console.log(`Server listening on port: ${port}`);

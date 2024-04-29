@@ -58,7 +58,7 @@ const UploadFiles = () => {
         <div className="upload-files-input-area">
           <label for="fileInput" class="btn">
             <span>Choose Files</span>
-            <input id="fileInput" className="upload-files-input" type="file" multiple accept='.csv' onChange={handleFileSelect} />
+            <input id="fileInput" className="upload-files-input" type="file" multiple accept='.csv' onChange={handleFileSelect} name='files' />
           </label>
           <br />
           <span id="noFilesMessage" className="no-files-message">No files chosen</span>
