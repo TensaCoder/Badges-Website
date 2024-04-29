@@ -40,6 +40,7 @@ const UploadFiles = () => {
   };
 
   return (
+    <div className='contains'>
     <div className="upload-files-container">
       <div
         className="upload-files-drop-area"
@@ -47,6 +48,7 @@ const UploadFiles = () => {
         onDragOver={(e) => e.preventDefault()}
       >
         <p>Drag & drop CSV files here</p>
+        <img src="./drag_drop.png" alt="Drag and drop icon" className="drag-drop-icon" />
       </div>
       <div className="upload-files-input-area">
         <input className="upload-files-input" type="file" multiple accept='.csv' onChange={handleFileSelect} />
@@ -60,6 +62,7 @@ const UploadFiles = () => {
             </div>
           ))}
         </div>
+    </div>
     </div>
   );
 };

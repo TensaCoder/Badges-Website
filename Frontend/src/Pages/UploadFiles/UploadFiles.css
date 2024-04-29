@@ -1,10 +1,23 @@
-.upload-files-container {
+body{
+  background: -webkit-linear-gradient(45deg, #212121, #161616);
+}
+
+
+.contains{
   width: 50%;
-  height: auto;
+  margin: auto;
+  margin-top: 140px;
+  background-color: #3b3838;
+  align-content: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 10px rgba(230, 227, 227, 0.2); 
+}
+
+.upload-files-container {
+  width: 65%;
   border: 2px dashed #aaa;
   text-align: center;
-  padding-top: 50px;
-  margin: 10rem auto;
+  margin: 100px auto;
 }
 
 .upload-files-drop-area {
@@ -41,3 +54,4 @@
 .upload-files-list-item {
   margin-bottom: 5px;
 }
+
