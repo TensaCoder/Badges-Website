@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import axios from 'axios';
 import './UploadFiles.css';
-import dragdropIcon from ".//dragdrop.jpeg";
+import dragdropIcon from ".//dragdrop.png";
 
 const UploadFiles = () => {
   const [files, setFiles] = useState([]);
@@ -15,6 +15,14 @@ const UploadFiles = () => {
   const handleFileSelect = (e) => {
     const selectedFiles = Array.from(e.target.files).filter(file => file.name.endsWith('.csv'));
     setFiles([...files, ...selectedFiles]);
+
+    // Show or hide "No files chosen" message based on whether files are selected
+    const noFilesMessage = document.getElementById('noFilesMessage');
+    if (selectedFiles.length > 0) {
+      noFilesMessage.style.display = 'none';
+    } else {
+      noFilesMessage.style.display = 'inline';
+    }
   };
 
   const handleFileUpload = async () => {
@@ -42,20 +50,23 @@ const UploadFiles = () => {
 
   return (
     <div className='contains'>
-    <div className="upload-files-container">
-      <div
-        className="upload-files-drop-area"
-        onDrop={handleFileDrop}
-        onDragOver={(e) => e.preventDefault()}
-      >
-        <p>Drag & drop CSV files here</p>
-        <img src={dragdropIcon} alt="Drag and drop icon" className="drag-drop-icon" />
-      </div>
-      <div className="upload-files-input-area">
-        <input className="upload-files-input" type="file" multiple accept='.csv' onChange={handleFileSelect} />
-        <br />
-      </div>
-        <button className="upload-files-button" disabled={files.length === 0} onClick={handleFileUpload}>Upload Files</button>
+      <div className="upload-files-container">
+        <div
+          className="upload-files-drop-area"
+          onDrop={handleFileDrop}
+          onDragOver={(e) => e.preventDefault()}
+        >
+          <p>Drag & drop CSV files here</p>
+          <img src={dragdropIcon} alt="Drag and drop icon" className="drag-drop-icon" />
+        </div>
+        <div className="upload-files-input-area">
+          <label for="fileInput" class="btn">
+            <span>Choose Files</span>
+            <input id="fileInput" className="upload-files-input" type="file" multiple accept='.csv' onChange={handleFileSelect} />
+          </label>
+          <br />
+          <span id="noFilesMessage" className="no-files-message">No files chosen</span>
+        </div>
         <div className="upload-files-list">
           {files.map((file, index) => (
             <div key={index} className="upload-files-list-item">
@@ -63,7 +74,9 @@ const UploadFiles = () => {
             </div>
           ))}
         </div>
-    </div>
+
+      </div>
+      <button className="upload-files-button" disabled={files.length === 0} onClick={handleFileUpload}>Upload Files</button>
     </div>
   );
 };
