@@ -1,0 +1,5 @@
+userid,username,dob,email,phone_number,role_title,badge_name,verticals,start_date,end_date,recommendations
+1234567890,XYZ,01-01-2000,xyz@gmail.com,9999999999,Cyber Investigator,Internship,"Dark Web, Red Teaming, OSINT",01-01-2024,01-04-2024,Anything
+1234567890,XYZ,01-01-2000,xyz@gmail.com,9999999999,Cyber Investigator,Course,Some Random Course,01-02-2024,01-03-2024,Something
+5672086598,ABC,02-02-2002,abc@hotmail.com,1234564362,Senior Cyber Investigator,Employement,"Developer, OSINT lead, Forensics Expert",01-07-2022,01-07-2023,Random
+5672056598,GEF,18-02-2002,geez@hotmail.com,1234564361,Cyber Analyst,Employement,"Developer, Red Team lead",01-07-2022,01-08-2023,Not So Random
