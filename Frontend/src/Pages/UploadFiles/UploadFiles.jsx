@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import axios from 'axios';
 import './UploadFiles.css';
+import dragdropIcon from ".//dragdrop.jpeg";
 
 const UploadFiles = () => {
   const [files, setFiles] = useState([]);
@@ -48,7 +49,7 @@ const UploadFiles = () => {
         onDragOver={(e) => e.preventDefault()}
       >
         <p>Drag & drop CSV files here</p>
-        <img src="./drag_drop.png" alt="Drag and drop icon" className="drag-drop-icon" />
+        <img src={dragdropIcon} alt="Drag and drop icon" className="drag-drop-icon" />
       </div>
       <div className="upload-files-input-area">
         <input className="upload-files-input" type="file" multiple accept='.csv' onChange={handleFileSelect} />
