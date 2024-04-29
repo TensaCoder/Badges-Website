@@ -2,9 +2,13 @@ const express = require('express');
 const csvUploadController = require('./controllers/csv-upload');
 const { connect } = require('./db');
 const multer = require('multer');
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 connect();
+
+let port = 8000;
 
 // app.use(express.urlencoded({ extended: true }));
 const storage = multer.diskStorage({
@@ -21,6 +25,6 @@ const upload = multer({ storage: storage });
 
 app.post('/csv-upload', upload.single('file'), csvUploadController.uploadCSV);
 
-app.listen(3000, () => {
-    console.log('Server listening on port 3000');
+app.listen(port, () => {
+    console.log(`Server listening on port: ${port}`);
 });

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import './UploadFiles.css';
 import dragdropIcon from ".//dragdrop.png";
 
@@ -29,23 +29,19 @@ const UploadFiles = () => {
     // You can implement the file upload logic here
     console.log('Files ready for upload:', files);
     // Uncomment below code when implementing file upload logic
-    /*
+    let url = "http://localhost:8000/csv-upload"
     try {
       const formData = new FormData();
       files.forEach((file) => {
         formData.append('files', file);
       });
       // Replace 'your-backend-endpoint' with your actual backend endpoint
-      const response = await axios.post('backend-endpoint', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
+      const response = await axios.post(url, formData);
       console.log('Files uploaded successfully:', response.data);
     } catch (error) {
-      console.error('Error uploading files:', error);
+      console.error('Error uploading files:', error.response.data);
     }
-    */
+    
   };
 
   return (
