@@ -1,5 +1,5 @@
 body{
-  background: -webkit-linear-gradient(45deg, #212121, #161616);
+  background: -webkit-linear-gradient(50deg, #212121, #161616);
 }
 
 
@@ -7,7 +7,7 @@ body{
   width: 50%;
   height: auto;
   margin: auto;
-  margin-top: 160px;
+  margin-top: 140px;
   background-color: #3b3838;
   align-content: center;
   border-radius: 20px;

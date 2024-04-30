@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./SearchBadges.css";
+import Navbar from "../../Components/Navbar";
 
 const SearchBadges = () => {
   const [userId, setUserId] = useState("");
@@ -71,7 +72,10 @@ const SearchBadges = () => {
   };
 
   return (
+    <div>
+    <Navbar/>
     <div className={`search-bar-container ${isUserFound ? "user-found" : ""}`}>
+    <div className="search-input-container">
       <input
         type="text"
         placeholder="Enter 10-digit User ID"
@@ -96,6 +100,8 @@ const SearchBadges = () => {
           {/* <CoursesComponent data={userData.courses} /> */}
         </div>
       )}
+    </div>
+    </div>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './UploadFiles.css';
 import dragdropIcon from ".//dragdrop.png";
+import Navbar from '../../Components/Navbar';
 
 const UploadFiles = () => {
   const [files, setFiles] = useState([]);
@@ -45,6 +46,8 @@ const UploadFiles = () => {
   };
 
   return (
+    <div>
+    <Navbar />
     <div className='contains'>
       <div className="upload-files-container">
         <div
@@ -73,6 +76,7 @@ const UploadFiles = () => {
 
       </div>
       <button className="upload-files-button" disabled={files.length === 0} onClick={handleFileUpload}>Upload Files</button>
+    </div>
     </div>
   );
 };
