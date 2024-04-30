@@ -1,0 +1,33 @@
+.search-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.user-found {
+  align-items: flex-start;
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-data-container {
+  margin-top: 20px;
+}
+
+.error-message-block{
+    color: red;
+}

@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import UploadFiles from "./Pages/UploadFiles/UploadFiles";
 import './App.css';
+import SearchBadges from "./Pages/SearchBadges/SearchBadges";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
     <BrowserRouter>
           <Routes>
             <Route path="/uploadfiles" element={<UploadFiles />} />
+            <Route path="/searchbadges" element={<SearchBadges />} />
+
  
           </Routes>
       </BrowserRouter>
