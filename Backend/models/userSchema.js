@@ -11,9 +11,9 @@ const userSchema = new mongoose.Schema({
     verticals: { type: [String], required: true },
     start_date: { type: String, required: true },
     end_date: { type: String, required: true },
-    duration: { type: Number, required: true }, //will be calculated from end_date-start_date
-    badgeid: { type: String, required: true }, // generate string of 10 random digits
-    badge_type: { type: String, requried: true }, // will be decided upon duration
+    duration: { type: Number, required: true },
+    badgeid: { type: String, required: true },
+    badge_type: { type: String, requried: true },
     recommendations: String,
 });
 

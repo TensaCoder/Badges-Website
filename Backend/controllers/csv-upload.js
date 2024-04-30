@@ -20,15 +20,13 @@ const uploadCSV = async (req, res) => {
                     console.error(`Missing required fields for user: ${JSON.stringify(row)}`);
                     return;
                 }
-                // Convert the phone_number to a string, as it's saved as a string in the schema
+                // Convert the phone_number to a string
                 row.phone_number = row.phone_number.toString();
-                row.verticals = row.verticals.split(',');
-                // Calculate the duration
-                // const startDate = new Date(row.start_date);
-                // const endDate = new Date(row.end_date);
-                // const duration = Math.floor((endDate - startDate) / (1000 * 60 * 60 * 24));
-                // row.duration = duration;
 
+                // split verticals
+                row.verticals = row.verticals.split(',');
+
+                // Calculate the duration
                 const startDate = moment(row.start_date, 'DD-MM-YYYY');
                 const endDate = moment(row.end_date, 'DD-MM-YYYY');
                 const duration = endDate.diff(startDate, 'months');
@@ -37,7 +35,7 @@ const uploadCSV = async (req, res) => {
                 // Generate a random badgeid
                 row.badgeid = Math.floor(1000000000 + Math.random() * 9000000000).toString();
 
-                // Decide the badge_type based on the duration
+                // Decide the badge_type
                 if (duration == 1) {
                     row.badge_type = 'Bronze';
                 } else if (duration == 3) {
