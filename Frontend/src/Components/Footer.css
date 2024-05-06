@@ -1,0 +1,71 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer__social {
+    display: flex;
+  }
+  
+  /* Facebook */
+  .social-icon.facebook {
+    color: #3b5998; /* Facebook blue color */
+  }
+  
+  /* Instagram */
+  .social-icon.instagram {
+    color: #e4405f; /* Instagram pink color */
+  }
+  
+  /* Twitter */
+  .social-icon.twitter {
+    color: #1da1f2; /* Twitter blue color */
+  }
+  
+  /* LinkedIn */
+  .social-icon.linkedin {
+    color: #0077b5; /* LinkedIn blue color */
+  }
+  
+  /* WhatsApp */
+  .social-icon.whatsapp {
+    color: #25d366; /* WhatsApp green color */
+  }
+  
+  .social-icon {
+    font-size: 28px; /* Increase font size for better visibility */
+    margin-right: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Beautify social icons */
+  .social-icon:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5); /* Reduce shadow size */
+    border-radius: 50%;
+  }
+  
+  .footer__contact {
+    text-align: right;
+    font-size: 16px;
+  }
+  
+  .footer__contact p {
+    margin: 5px 0;
+  }
+  
+  .footer__contact p:first-child {
+    margin-top: 10px; /* Add some space above the first paragraph */
+    font-weight: bold; /* Make the "Contact Us:" text bold */
+    color: #ccc; /* Light gray color for the "Contact Us:" text */
+  }
+  
+  .footer__contact p:not(:first-child) {
+    color: #aaa; /* Lighter gray color for other contact information */
+  }
+  
+  

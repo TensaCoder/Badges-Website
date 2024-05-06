@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./SearchBadges.css";
 import Navbar from "../../Components/Navbar";
+import Footer from "../../Components/Footer";
 
 const SearchBadges = () => {
   const [userId, setUserId] = useState("");
@@ -102,6 +103,7 @@ const SearchBadges = () => {
       )}
     </div>
     </div>
+    <Footer/>
     </div>
   );
 };
