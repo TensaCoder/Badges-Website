@@ -5,15 +5,18 @@ import { badgeImages } from "./InternshipJSON";
 const InternshipComponent = ({ internshipData }) => {
   //   const [internshipDuration, setInternshipDuration] = useState(0);
   const [imgURL, setImgURL] = useState("");
-    let data;
+  let data;
   if (internshipData && internshipData.length > 0) {
     data = internshipData[0];
   }
+
+  console.log(data.badge_type);
 
   useEffect(() => {
     if (data.badge_type === "Bronze") {
       setImgURL(badgeImages.Bronze);
     } else if (data.badge_type === "Silver") {
+      console.log(badgeImages.Silver);
       setImgURL(badgeImages.Silver);
     } else if (data.badge_type === "Gold") {
       setImgURL(badgeImages.Gold);
@@ -22,17 +25,16 @@ const InternshipComponent = ({ internshipData }) => {
     }
   }, [internshipData]);
 
-//   console.log(imgURL);
+  console.log(imgURL);
 
   return (
     <>
       <div className="internship-container">
         <h1>Badges</h1>
         <div>
-          <img src={require(`${imgURL}`)} alt="" />
+        {imgURL && <img src={require(`${imgURL}`)} alt="" />}
           <h3>{data.badge_type}</h3>
           <div>Completed {data.duration} Months</div>
-          
         </div>
       </div>
     </>
