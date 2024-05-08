@@ -4,6 +4,7 @@ import "./SearchBadges.css";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import InternshipComponent from "./Internship/InternshipComponent";
+import CoursesComponent from "./Courses/CoursesComponent";
 
 // import { badgeImages } from "./Internship/InternshipJSON";
 
@@ -78,7 +79,6 @@ const SearchBadges = () => {
         )
       );
       setCoursesData(userData.filter((item) => item.badge_name === "Course"));
-
     } catch (error) {
       console.error("Error fetching user data:", error);
       setIsUserFound(false);
@@ -118,9 +118,10 @@ const SearchBadges = () => {
         <div className="user-data-container">
           {/* Render Internship/Employment and Courses components here */}
           <InternshipComponent internshipData={internshipData} />
-          {/* <CoursesComponent data={userData.courses} /> */}
+          <CoursesComponent coursesData={coursesData} />
         </div>
       )}
+      <Footer />
     </div>
     // </div>
     // </div>
