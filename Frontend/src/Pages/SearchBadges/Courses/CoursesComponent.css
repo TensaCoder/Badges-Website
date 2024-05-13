@@ -1,3 +1,49 @@
 .course-container{
     color: white;
 }
+  .course-container h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .course-container div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .course-container img {
+    width: 100px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .course-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  
+  .course-item {
+    box-shadow: 0 0 10px #014C6C; /* Add a box shadow for a card-like effect */
+    border-radius: 8px; /* Add border radius for rounded corners */
+    width: 400px; /* Set a fixed width */
+    height: 180px; /* Set a fixed height */
+    padding: 20px; /* Add padding */
+    margin-right: 30px; /* Add margin between course items */
+    margin-bottom: 50px; /* Add margin between course items */
+    text-align: center; /* Center align content */
+  }
+  
+  .course-item img {
+    width: 180px; /* Adjust the width of course images as needed */
+   
+  }
+  
+  .course-item p {
+    margin-top: 12; /* Remove default margin */
+    margin-left: 10px;
+    color: #03A9F0;
+    font-weight: 500; /* Set font weight to Extra Bold */
+    font-size: 19px; /* Set font size to 28.5px */
+  }
+  

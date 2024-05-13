@@ -2,3 +2,50 @@
     color: white;
     /* display: block; */
 }
+.internship-container {
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+  
+  .internship-container h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .internship-container img {
+    max-width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .internship-container h3 {
+    font-size: 18px;
+  }
+  
+  .internship-container div {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .badge-info {
+    border-radius: 8px; /* Add border radius for rounded corners */
+    display: inline-block;
+    padding: 35px;
+    text-align: center;
+    margin-top: 80px !important;
+  }
+  
+  .badge-info img {
+    width: 150px;
+    margin-top: -110px;
+  }
+  
+  .badge-info h3 {
+    font-size: 25px;
+    
+  }
+  
+  .badge-info p {
+    font-size: 19px;
+  }  
+
+  

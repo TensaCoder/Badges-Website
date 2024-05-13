@@ -10,6 +10,7 @@ import CoursesComponent from "./Courses/CoursesComponent";
 
 const SearchBadges = () => {
   const [userId, setUserId] = useState("");
+  const [userName, setUserName] = useState("");
   //   const [userData, setUserData] = useState();
   const [isUserFound, setIsUserFound] = useState(false);
   const [isValidInput, setIsValidInput] = useState(true);
@@ -70,15 +71,19 @@ const SearchBadges = () => {
 
       let userData = response.data;
       setIsUserFound(true);
-      console.log(userData);
+      // console.log(userData);
+
+      const username = userData.length > 0 ? userData[0].username : "";
+      setUserName(username);
 
       setInternshipData(
         userData.filter(
           (item) =>
-            item.badge_name === "Internship" || item.badge_name === "Employment"
+            item.badge_name === "Internship" || item.badge_name === "Employement"
         )
       );
       setCoursesData(userData.filter((item) => item.badge_name === "Course"));
+      
     } catch (error) {
       console.error("Error fetching user data:", error);
       setIsUserFound(false);
@@ -117,6 +122,8 @@ const SearchBadges = () => {
       {isUserFound && (
         <div className="user-data-container">
           {/* Render Internship/Employment and Courses components here */}
+          <h1>Welcome {userName} !</h1>
+          <p className="userid">Id: {userId} </p>
           <InternshipComponent internshipData={internshipData} />
           <CoursesComponent coursesData={coursesData} />
         </div>

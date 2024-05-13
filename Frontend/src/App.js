@@ -15,6 +15,7 @@ function App() {
             <Route path="/uploadfiles" element={<UploadFiles />} />
             <Route path="/searchbadges" element={<SearchBadges />} />
 
+
  
           </Routes>
       </BrowserRouter>

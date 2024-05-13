@@ -32,20 +32,34 @@ const CoursesComponent = ({ coursesData }) => {
   console.log(courseData);
 
   return (
-    <>
-      <div className="course-container">
-        <h1>Courses</h1>
-        <div>
-          {courseData.map((item) => (
-            <div key={item.name}>
-              <img src={require(`${item.imageURL}`)} alt="Course Image" />
-              <p>{item.name}</p>
-            </div>
-          ))}
-        </div>
+    <div className="course-container">
+      <h1>Courses</h1>
+      <div className="course-items">
+        {courseData.map((item, index) => (
+          <div className="course-item" key={index}>
+            <img src={require(`${item.imageURL}`)} alt="Course Image" />
+            <p>{item.name}</p>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
+
+  // return (
+  //   <>
+  //     <div className="course-container">
+  //       <h1>Courses</h1>
+  //       <div className="course-items">
+  //         {courseData.map((item) => (
+  //           <div key={item.name}>
+  //             <img src={require(`${item.imageURL}`)} alt="Course Image" />
+  //             <p>{item.name}</p>
+  //           </div>
+  //         ))}
+  //       </div>
+  //     </div>
+  //   </>
+  // );
 };
 
 export default CoursesComponent;

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
+  min-height: 76vh;
 }
 
 .search-input-container {
@@ -11,13 +11,10 @@
   align-items: center; /* Center items vertically */
 }
 
-.user-found {
-  align-items: flex-start;
-}
 
 .search-input {
-  width: 500px;
-  padding: 15px;
+  width: 700px;
+  padding: 12px;
   border: 2px solid #ccc;
   border-radius: 10px;
   font-size: 16px;
@@ -42,7 +39,27 @@
 }
 
 .user-data-container {
-  margin-top: 20px;
+  margin: 0px auto; /* Center the container horizontally */
+  max-width: 1500px; /* Adjust the maximum width of the container */
+  padding: 20px; /* Add padding inside the container */
+   /* Add a border */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 10px rgba(188, 186, 186, 0.5); /* Add a box shadow for a card-like effect */
+  margin-bottom: 100px;
+  margin-top: -170px;
+  overflow-y: auto; /* Add vertical scrollbar when content exceeds container height */
+  max-height: calc(110vh - 100px); /* Set max height for scroll to avoid overlapping with footer */
+}
+
+.user-data-container h1{
+  color: white;
+  font-size: 30px;
+}
+
+.userid{
+  color: white;
+  font-size: 19px;
+  font-style: italic;
 }
 
 .error-message-block {
